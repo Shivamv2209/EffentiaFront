@@ -62,6 +62,7 @@ function Navbar() {
 
   const featureClick = () => {
     setFeatureDrop(!featureDrop);
+    
   };
   return (
     <>
@@ -77,7 +78,9 @@ function Navbar() {
             <ul className="hidden md:flex items-center gap-4 mt-2 mb-2 text-zinc-700">
               <li
                 onClick={featureClick}
-                className="flex items-center hover:text-[#FA812F] cursor-pointer"
+                className={`flex items-center hover:text-[#FA812F] cursor-pointer ${
+                    featureDrop ? "text-[#FA812F] " : ""
+                }`}
               >
                 Features{" "}
                 <span className="text-xl">
@@ -107,7 +110,7 @@ function Navbar() {
           </div>
 
           {featureDrop && (
-            <div className="absolute z-[999] w-full top-10 h-auto flex items-center left-0 shadow-lg">
+            <div className="absolute z-[999] w-full top-15 h-auto flex items-center left-0 shadow-lg">
               <div className="w-[60%]  bg-white pt-10 pl-30 pr-10 pb-10">
                 <div className="flex items-center text-left">
                   <h4 className="text-md font-medium">
