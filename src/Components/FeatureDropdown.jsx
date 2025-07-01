@@ -1,55 +1,55 @@
 import React from "react";
 
 function FeatureDropdown() {
-    const featureContent = [
-        {
-          image: "/star.png",
-          heading: "Feature 1",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
-        
-        },
-        {
-          image: "/star.png",
-          heading: "Feature 2",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
-          
-        },
-        {
-          image: "/star.png",
-          heading: "Feature 3",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
-          
-        },
-        {
-          image: "/star.png",
-          heading: "Feature 4",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
-        },
-        {
-          image: "/star.png",
-          heading: "Feature 5",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
-        },
-        {
-          image: "/star.png",
-          heading: "Feature 6",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
-        },
-        {
-          image: "/star.png",
-          heading: "Feature 7",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
-        },
-      ];
+  const featureContent = [
+    {
+      image: "/star.png",
+      heading: "Feature 1",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
+
+    },
+    {
+      image: "/star.png",
+      heading: "Feature 2",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
+
+    },
+    {
+      image: "/star.png",
+      heading: "Feature 3",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
+
+    },
+    {
+      image: "/star.png",
+      heading: "Feature 4",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
+    },
+    {
+      image: "/star.png",
+      heading: "Feature 5",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
+    },
+    {
+      image: "/star.png",
+      heading: "Feature 6",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
+    },
+    {
+      image: "/star.png",
+      heading: "Feature 7",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit Placeat quidem illum harum nam",
+    },
+  ];
   return (
-    <div className="absolute z-[999] w-full top-15 h-auto flex items-center left-0 shadow-lg">
+<div className="absolute z-[999] w-full top-15 flex left-0 shadow-lg bg-white">
       <div className="w-[60%]  bg-white pt-8 pl-28 pr-8 pb-8">
         <div className="flex items-center text-left">
           <h4 className="text-md font-medium">
@@ -71,30 +71,25 @@ function FeatureDropdown() {
           ))}
         </div>
       </div>
-      <div className="w-[40%] bg-zinc-100">
-        <div className="pl-10 pr-90 pt-8">
-          <div className="flex items-center text-left">
-            <h4 className="text-md font">Meet Leadnest</h4>
-          </div>
-          <hr className="mt-3 text-zinc-400" />
-        </div>
-        <div className="pl-10 pr-90">
-          <div className="grid gird-cols-1 mt-3">
-            <p className="text-sm text-zinc-500">
+      <div className="w-[40%] bg-zinc-100 pt-8 pl-8 pr-8 pb-8">
+        <div>
+          <h4 className="text-md font-medium text-gray-700 mb-6">Meet Leadnest</h4>
+          <hr className="text-zinc-500" />
+          <div className="mt-6">
+            <p className="text-sm text-gray-600 leading-relaxed">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
               possimus esse minima natus eligendi nisi eaque, eos aliquam rem
               cupiditate!
             </p>
           </div>
-        </div>
-        <div className="mt-7 mb-36.5 pr-50 pl-10 text-left">
-          <div className="flex items-center">
-            <button className="px-4 py-2 border-1 border-zinc-700 shadow-lg bg-white rounded-lg cursor-pointer hover:bg-zinc-300">
+          <div className="mt-8">
+            <button className="px-4 py-2 border border-zinc-700 text-sm font-medium text-gray-700 bg-white rounded-md shadow-sm hover:bg-zinc-200 transition-all duration-150">
               Check out Leadnest
             </button>
           </div>
         </div>
       </div>
+
     </div>
   );
 }
