@@ -1,79 +1,142 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Components/Header";
+import axiosInstance from "../utils/axiosInstances";
+import {useNavigate} from "react-router-dom"
 
 export default function Signup() {
-    return (
-        <div>
-            <Header />
-            <div className="min-h-screen flex">
-                {/* Left side */}
-                <div className="w-1/2 flex flex-col items-center justify-center p-10 space-y-6">
-                    <h1 className="w-2/3 text-5xl font-bold bg-clip-text text-transparent text-center p-1 bg-gradient-to-t from-orange-500/20 to-orange-500/75">
-                        A good system shortens the road to the goal.
-                    </h1>
-                    <p className="w-2/3 text-gray-600 text-center">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Morbi lobortis maximus
-                    </p>
+    const navigate = useNavigate();
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-                    <form className="w-full  max-w-sm space-y-4">
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1 pl-2">Email:</label>
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                            />
-                        </div>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1 pl-2">Full Name:</label>
-                            <input
-                                type="text"
-                                placeholder="Enter your name"
-                                className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                            />
-                        </div>
+    if (name === "fullname") {
+      setFullname(value);
+    } else if (name === "email") {
+      setEmail(value);
+    } else if (name === "password") {
+      setPassword(value);
+    }
+  };
 
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-1 pl-2">Password:</label>
-                            <input
-                                type="password"
-                                placeholder="Enter your password"
-                                className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
-                            />
-                        </div>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-                        <button className="w-full mt-3 bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 transition-transform duration-150 hover:scale-105">
-                            Sign up
-                        </button>
-                    </form>
+    try {
+        console.log({ fullname, email, password });
+        const response = await axiosInstance.post("/auth/register",{
+            fullname,
+            email,
+            password
+        })
 
+        if(response.status === 201){
+            alert("user created")
+          navigate("/login")
+        }
+    } catch (err) {
+      console.error("Signup error:", err.response?.data || err.message);
+    alert(err.response?.data?.message || "Signup failed.");
+    }
+  };
 
-                    <p className="text-sm text-gray-500">
-                        Already have an account?{" "}
-                        <a href="/login" className="text-orange-500 hover:underline">
-                            Log in
-                        </a>
-                    </p>
+  return (
+    <div>
+      <Header />
+      <div className="min-h-screen flex">
+        {/* Left side */}
+        <div className="w-1/2 flex flex-col items-center justify-center p-10 space-y-6">
+          <h1 className="w-2/3 text-5xl font-bold bg-clip-text text-transparent text-center p-1 bg-gradient-to-t from-orange-500/20 to-orange-500/75">
+            A good system shortens the road to the goal.
+          </h1>
+          <p className="w-2/3 text-gray-600 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Morbi
+            lobortis maximus
+          </p>
 
-                    <p className="text-xs text-gray-500 text-center w-full max-w-sm">
-                        By signing up, you agree to the{" "}
-                        <a href="#" className="underline hover:text-orange-600">Terms of Service</a> and{" "}
-                        <a href="#" className="underline hover:text-orange-600">Privacy Policy</a>, including{" "}
-                        <a href="#" className="underline hover:text-orange-600">cookie use</a>.
-                    </p>
-                </div>
-
-                {/* Right side illustration */}
-                <div className="w-1/2">
-                    <img
-                        src="/SignupHero.svg" // Replace this with your SVG
-                        alt="Sign up illustration"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
+          <form className="w-full  max-w-sm space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1 pl-2">
+                Email:
+              </label>
+              <input
+              onChange={handleChange}
+                type="email"
+                placeholder="Enter your email"
+                name="email"
+                value={email}
+                className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+              />
             </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1 pl-2">
+                Full Name:
+              </label>
+              <input
+              onChange={handleChange}
+                type="text"
+                placeholder="Enter your name"
+                name="fullname"
+                value={fullname}
+                className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1 pl-2">
+                Password:
+              </label>
+              <input
+              onChange={handleChange}
+                type="password"
+                name="password"
+                value={password}
+                placeholder="Enter your password"
+                className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+              />
+            </div>
+
+            <button onClick={handleSubmit} className="w-full mt-3 bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 transition-transform duration-150 hover:scale-105">
+              Sign up
+            </button>
+          </form>
+
+          <p className="text-sm text-gray-500">
+            Already have an account?{" "}
+            <a href="/login" className="text-orange-500 hover:underline">
+              Log in
+            </a>
+          </p>
+
+          <p className="text-xs text-gray-500 text-center w-full max-w-sm">
+            By signing up, you agree to the{" "}
+            <a href="#" className="underline hover:text-orange-600">
+              Terms of Service
+            </a>{" "}
+            and{" "}
+            <a href="#" className="underline hover:text-orange-600">
+              Privacy Policy
+            </a>
+            , including{" "}
+            <a href="#" className="underline hover:text-orange-600">
+              cookie use
+            </a>
+            .
+          </p>
         </div>
-    );
+
+        {/* Right side illustration */}
+        <div className="w-1/2">
+          <img
+            src="/SignupHero.svg" // Replace this with your SVG
+            alt="Sign up illustration"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

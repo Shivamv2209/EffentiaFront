@@ -1,9 +1,51 @@
 import React, { useState } from "react";
 import Header from "../Components/Header";
 import { FaGoogle, FaFacebookF, FaApple } from "react-icons/fa";
-
+import {useDispatch} from "react-redux"
+import {setLogin} from "../Store/reducer/States"
+import {useNavigate} from "react-router-dom"
+import instance from "../utils/axiosInstances"
 export default function Login() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [showEmailForm, setShowEmailForm] = useState(false);
+  const [email,setEmail]= useState("");
+  const [password,setPassword] = useState("");
+
+  const handleChange = (e) =>{
+    const {name,value} = e.target
+
+    if(name==="email"){
+      setEmail(value)
+    }else if(name==="password"){
+      setPassword(value);
+    }
+  };
+
+  const handleLogin = async (e) =>{
+    e.preventDefault();
+
+  try{
+    const response = await instance.post("/auth/login",{
+      email,password
+    })
+
+    const loggedIn = response.data;
+
+   if(loggedIn){
+    dispatch(setLogin({
+      user:loggedIn.user,
+      token:loggedIn.token
+    }))
+
+    navigate("/user/dis1")
+   }
+
+  }catch(err){
+     console.error("login error:", err.response?.data || err.message);
+    alert(err.response?.data?.message || "login failed.");
+  }
+  }
 
   return (
     <div>
@@ -59,15 +101,22 @@ export default function Login() {
                   <input
                     type="email"
                     placeholder="Email"
+                    name="email"
+                    value={email}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
                   />
                   <input
                     type="password"
                     placeholder="Password"
+                    onChange={handleChange}
+                    name="password"
+                    value={password}
                     className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
                   />
                   <button
                     type="submit"
+                    onClick={handleLogin}
                     className="w-full bg-orange-500 text-white py-2 rounded-full hover:bg-orange-600 transition-transform duration-150 hover:scale-105"
                   >
                     Log In
