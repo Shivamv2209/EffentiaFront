@@ -92,7 +92,7 @@ function SolutionDropdown(){
                   <h4 className="text-md font-medium text-gray-700 mb-6">
                     Our product in action
                   </h4>
-                  <hr className="text-zinc-500 "/>
+                  <hr className="text-zinc-500" />
                   <div className="space-y-6">
                     {solutionsContent.useCases.map((useCase, i) => (
                       <div key={i} className="group cursor-pointer mt-5">
