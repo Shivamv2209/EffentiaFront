@@ -16,7 +16,7 @@ export default function Signup() {
                         Morbi lobortis maximus
                     </p>
 
-                    <form className="w-full max-w-sm space-y-4">
+                    <form className="w-full  max-w-sm space-y-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1 pl-2">Email:</label>
                             <input
