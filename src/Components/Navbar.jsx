@@ -5,6 +5,7 @@ import FeatureDropdown from "./featureDropdown";
 import SolutionDropdown from "./SolutionDropdown";
 import PlanDropdown from "./PlanDropdown";
 import ResourceDropdown from "./ResourceDropdown";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [featureDrop, setFeatureDrop] = useState(false);
@@ -12,8 +13,8 @@ function Navbar() {
   const [plansDrop, setPlansDrop] = useState(false);
   const [resourceDrop, setResourceDrop] = useState(false);
 
-  
- 
+
+
   const isAnyDropdownOpen =
     featureDrop || solutionDrop || plansDrop || resourceDrop;
 
@@ -31,17 +32,17 @@ function Navbar() {
     setResourceDrop(false);
   };
 
-  const plansClick = () =>{
+  const plansClick = () => {
     setPlansDrop(!plansDrop)
-      setFeatureDrop(false);
-     setSolutionDrop(false);
-       setResourceDrop(false);
+    setFeatureDrop(false);
+    setSolutionDrop(false);
+    setResourceDrop(false);
   }
 
-  const resourceClick = () =>{
+  const resourceClick = () => {
     setResourceDrop(!resourceDrop)
-     setFeatureDrop(false);
-     setSolutionDrop(false);
+    setFeatureDrop(false);
+    setSolutionDrop(false);
     setPlansDrop(false);
 
   }
@@ -59,31 +60,28 @@ function Navbar() {
             <ul className="hidden md:flex items-center gap-4 mt-2 mb-2 text-zinc-700">
               <li
                 onClick={featureClick}
-                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${
-                    featureDrop ? "text-[#FA812F] " : ""
-                }`}
+                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${featureDrop ? "text-[#FA812F] " : ""
+                  }`}
               >
                 Features{" "}
                 <span className={`text-xl transition-transform duration-100 ${featureDrop ? 'rotate-180' : ''}`}>
                   <RiArrowDropDownLine />
                 </span>
               </li>
-              <li 
+              <li
                 onClick={solutionClick}
-                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${
-                    solutionDrop ? "text-[#FA812F] " : ""
-                }`}
+                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${solutionDrop ? "text-[#FA812F] " : ""
+                  }`}
               >
                 Solutions{" "}
                 <span className={`text-xl transition-transform duration-100 ${solutionDrop ? 'rotate-180' : ''}`}>
                   <RiArrowDropDownLine />
                 </span>
               </li>
-             <li 
+              <li
                 onClick={plansClick}
-                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${
-                    plansDrop ? "text-[#FA812F] " : ""
-                }`}
+                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${plansDrop ? "text-[#FA812F] " : ""
+                  }`}
               >
                 Plans{" "}
                 <span className={`text-xl transition-transform duration-100 ${plansDrop ? 'rotate-180' : ''}`}>
@@ -91,11 +89,10 @@ function Navbar() {
                 </span>
               </li>
               <li className=" hover:text-[#FA812F] cursor-pointer">Pricing</li>
-              <li 
+              <li
                 onClick={resourceClick}
-                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${
-                    resourceDrop ? "text-[#FA812F] " : ""
-                }`}
+                className={`flex items-center hover:text-[#FA812F] cursor-pointer transition-colors duration-100 ${resourceDrop ? "text-[#FA812F] " : ""
+                  }`}
               >
                 Resources{" "}
                 <span className={`text-xl transition-transform duration-100 ${resourceDrop ? 'rotate-180' : ''}`}>
@@ -107,12 +104,14 @@ function Navbar() {
 
           {featureDrop && <FeatureDropdown />}
           {solutionDrop && <SolutionDropdown />}
-          {plansDrop && ( <PlanDropdown /> )}
-          {resourceDrop && <ResourceDropdown /> }
+          {plansDrop && (<PlanDropdown />)}
+          {resourceDrop && <ResourceDropdown />}
           <div className="hidden md:flex items-center gap-4">
-            <button className="mt-1 text-xl cursor-pointer text-zinc-700 hover:text-[#FA812F] transition-colors duration-100">
-              Log in
-            </button>
+            <Link to="/login">
+              <button className="mt-1 text-xl cursor-pointer text-zinc-700 hover:text-[#FA812F] transition-colors duration-100">
+                Log in
+              </button>
+            </Link>
             <button className="bg-[#FA812F] px-3 py-4 text-xl cursor-pointer hover:bg-orange-300 transition-colors duration-100">
               Get Leadnest for free
             </button>
