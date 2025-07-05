@@ -34,11 +34,11 @@ function HeroSection() {
             </p>
           </div>
           <div className="flex items-center gap-5 mt-7">
-            <button className="px-3 text-sm py-2 rounded-3xl bg-[#FA812F] text-white shadow-lg font-semibold cursor-pointer">
+            <button className="px-3 text-sm py-2 rounded-3xl bg-[#FA812F] hover:bg-orange-300 text-white shadow-lg font-semibold cursor-pointer">
               TRY IT FOR FREE
             </button>
             <div>
-              <button className="font-medium text-shadow-lg cursor-pointer">
+              <button className="font-medium hover:text-lg text-shadow-lg cursor-pointer">
                 EXPLORE MORE
               </button>
               <hr className="font-bold text-[#FA812F]" />

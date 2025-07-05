@@ -62,7 +62,6 @@ function RightCircle(){
                 <img src="/star.png" alt="" className="w-5 h-5" />
                 <h3 className="text-sm font-medium ml-3 mr-20 text-center">Feature 4</h3>
             </div>
-
           </div>
     )
 }
