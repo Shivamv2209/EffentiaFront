@@ -5,18 +5,18 @@ import FeatureDropdown from "./featureDropdown";
 import SolutionDropdown from "./SolutionDropdown";
 import PlanDropdown from "./PlanDropdown";
 import ResourceDropdown from "./ResourceDropdown";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
   const [featureDrop, setFeatureDrop] = useState(false);
   const [solutionDrop, setSolutionDrop] = useState(false);
   const [plansDrop, setPlansDrop] = useState(false);
   const [resourceDrop, setResourceDrop] = useState(false);
-
-
-
-  const isAnyDropdownOpen =
-    featureDrop || solutionDrop || plansDrop || resourceDrop;
+  
+const getStarted = ()=>{
+   navigate("/login")
+}
 
   const featureClick = () => {
     setFeatureDrop(!featureDrop);
@@ -112,7 +112,7 @@ function Navbar() {
                 Log in
               </button>
             </Link>
-            <button className="bg-[#FA812F] px-3 py-4 text-xl cursor-pointer hover:bg-orange-300 transition-colors duration-100">
+            <button onClick={getStarted} className="bg-[#FA812F] px-3 py-4 text-xl cursor-pointer hover:bg-orange-300 transition-colors duration-100">
               Get Leadnest for free
             </button>
           </div>

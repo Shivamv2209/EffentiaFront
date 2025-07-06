@@ -2,10 +2,16 @@ import React, { useRef } from "react";
 import RightCircle from "./RightCircle";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import {useNavigate} from "react-router-dom"
 
 gsap.registerPlugin(useGSAP);
 
 function HeroSection() {
+  const navigate = useNavigate();
+
+  const tryForFree = ()=>{
+    navigate("/login")
+  }
   
   const leftcontent = useRef();
 
@@ -17,6 +23,8 @@ function HeroSection() {
       ease:"power3.out"
 ,    })
   },[])
+
+
 
   return (
     <>
@@ -34,7 +42,7 @@ function HeroSection() {
             </p>
           </div>
           <div className="flex items-center gap-5 mt-7">
-            <button className="px-3 text-sm py-2 rounded-3xl bg-[#FA812F] hover:bg-orange-300 text-white shadow-lg font-semibold cursor-pointer">
+            <button onClick={tryForFree} className="px-3 text-sm py-2 rounded-3xl bg-[#FA812F] hover:bg-orange-300 text-white shadow-lg font-semibold cursor-pointer">
               TRY IT FOR FREE
             </button>
             <div>
