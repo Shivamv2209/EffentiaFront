@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../Components/Header";
-import { FaGoogle, FaFacebookF, FaApple } from "react-icons/fa";
+import { FaGoogle,FaMicrosoft, FaFacebookF, FaApple } from "react-icons/fa";
 import {useDispatch} from "react-redux"
 import {setLogin} from "../Store/reducer/States"
 import {useNavigate} from "react-router-dom"
@@ -38,7 +38,7 @@ export default function Login() {
       token:loggedIn.token
     }))
 
-    navigate("/user/dis1")
+    navigate("/explore")
    }
 
   }catch(err){
@@ -65,7 +65,7 @@ export default function Login() {
               <>
                 <button className="w-full px-4 py-2 border rounded-full flex items-center justify-center gap-3 hover:bg-gray-50 transition-transform duration-150 hover:scale-105">
                   <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                    src="/google.png"
                     alt="Google"
                     className="w-5 h-5"
                   />
@@ -73,12 +73,16 @@ export default function Login() {
                 </button>
 
                 <button className="w-full px-4 py-2 border rounded-full flex items-center justify-center gap-3 hover:bg-gray-50 transition-transform duration-150 hover:scale-105">
-                  <FaFacebookF className="text-xl text-blue-600" />
-                  Continue with Facebook
+                  <img
+                    src="/microsoft.png"
+                    alt="Microsoft"
+                    className="w-5 h-5"
+                  />
+                  Continue with Microsoft
                 </button>
 
                 <button className="w-full px-4 py-2 border rounded-full flex items-center justify-center gap-3 hover:bg-gray-50 transition-transform duration-150 hover:scale-105">
-                  <FaApple className="text-xl text-black" />
+                  <FaApple className="text-xl text-black w-5 h-5" />
                   Continue with Apple
                 </button>
 

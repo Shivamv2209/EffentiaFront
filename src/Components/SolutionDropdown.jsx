@@ -8,27 +8,27 @@ function SolutionDropdown(){
       {
         icon: "📢",
         heading: "Marketing teams",
-        content: "Whether launching a new product, campaign, or creating content, Leadnest helps marketing teams succeed.",
+        content: "Whether launching a new product, campaign, or creating content, Effentia helps marketing teams succeed.",
       },
       {
         icon: "📋",
         heading: "Product management",
-        content: "Use Leadnest's management boards and roadmap features to simplify complex projects and processes.",
+        content: "Use Effentia's management boards and roadmap features to simplify complex projects and processes.",
       },
       {
         icon: "⚙️",
         heading: "Engineering teams",
-        content: "Ship more code, faster, and give your developers the freedom to be more agile with Leadnest.",
+        content: "Ship more code, faster, and give your developers the freedom to be more agile with Effentia.",
       },
       {
         icon: "🎨",
         heading: "Design teams",
-        content: "Empower your design teams by using Leadnest to streamline creative requests and promote more fluid cross-team collaboration.",
+        content: "Empower your design teams by using Effentia to streamline creative requests and promote more fluid cross-team collaboration.",
       },
       {
         icon: "🚀",
         heading: "Startups",
-        content: "From hitting revenue goals to managing workflows, small businesses thrive with Leadnest.",
+        content: "From hitting revenue goals to managing workflows, small businesses thrive with Effentia.",
       },
       {
         icon: "🌍",
@@ -47,7 +47,7 @@ function SolutionDropdown(){
       },
       {
         heading: "Project management",
-        content: "Keep projects organized, deadlines on track, and teammates aligned with Leadnest.",
+        content: "Keep projects organized, deadlines on track, and teammates aligned with Effentia.",
       },
     ]
   };
@@ -57,7 +57,7 @@ function SolutionDropdown(){
               <div className="w-[60%] bg-white pt-8 pl-28 pr-8 pb-8">
                 <div className="flex items-center text-left mb-6">
                   <h4 className="text-md font-medium text-gray-700">
-                    Take a page out of these pre-built Leadnest playbooks designed for all teams
+                    Take a page out of these pre-built Effentia playbooks designed for all teams
                   </h4>
                 </div>
                 <hr className="text-zinc-300 mt-1"/>

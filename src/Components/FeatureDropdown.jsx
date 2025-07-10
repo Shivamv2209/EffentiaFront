@@ -1,6 +1,7 @@
 import React from "react";
 
 function FeatureDropdown() {
+
   const featureContent = [
     {
       image: "/star.png",
@@ -47,7 +48,7 @@ function FeatureDropdown() {
   ];
 
   return (
-    <div className="absolute z-[999] w-full top-15 h-auto flex flex-col md:flex-row left-0 shadow-lg bg-white animate-fadeIn">
+    <div  className="absolute z-[999] w-full top-15 h-auto flex flex-col md:flex-row left-0 shadow-lg bg-white animate-fadeIn">
       <div className="md:w-3/5 w-full pt-8 px-6 md:pl-28 md:pr-8 pb-8 bg-white">
         <div className="mb-6">
           <h4 className="text-md font-medium text-gray-700">
@@ -80,7 +81,7 @@ function FeatureDropdown() {
       <div className="md:w-2/5 w-full bg-zinc-100 pt-8 px-6 md:px-8 pb-8">
         <div className="mb-6">
           <h4 className="text-md font-medium text-gray-700 mb-4">
-            Meet Leadnest
+            Meet Effentia
           </h4>
           <hr className="text-zinc-500" />
         </div>
@@ -91,7 +92,7 @@ function FeatureDropdown() {
         </p>
         <div>
           <button className="px-4 py-2 border border-zinc-700 shadow-sm bg-white rounded-lg hover:bg-zinc-300 transition">
-            Check out Leadnest
+            Check out Effentia
           </button>
         </div>
       </div>

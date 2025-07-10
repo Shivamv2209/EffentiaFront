@@ -70,7 +70,7 @@ function PlanDropdown() {
         </div>
         <div className="mt-8 text-center">
           <button className="bg-orange-400 hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-100">
-            Take a tour of Leadnest
+            Take a tour of Effentia
           </button>
         </div>
       </div>
@@ -82,11 +82,11 @@ function PlanDropdown() {
           <hr className="mb-10 text-zinc-500" />
           <div className="bg-white p-6 rounded-lg border border-gray-200">
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              Whether you're a team of 2 or 2,000, Leadnest's flexible pricing
+              Whether you're a team of 2 or 2,000, Effentia's flexible pricing
               model means you only pay for what you need.
             </p>
             <button className="w-full bg-white border-2 border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-colors duration-100">
-              View Leadnest pricing
+              View Effentia pricing
             </button>
           </div>
         </div>

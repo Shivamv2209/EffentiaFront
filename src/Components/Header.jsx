@@ -6,7 +6,7 @@ export default function Header() {
     <header className="w-full py-4 px-6 flex items-center justify-between border-b border-gray-200">
       {/* Logo */}
       <Link to="/" className="text-2xl font-bold text-black">
-        LEADNEST
+        Effentia
       </Link>
 
       {/* Right side */}

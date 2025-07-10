@@ -6,8 +6,8 @@ function ResourceDropdown(){
     resources: [
       {
         icon: "📚",
-        heading: "Leadnest guide",
-        content: "Our easy to follow workflow guide will take you from project set-up to Leadnest expert in no time.",
+        heading: "Effentia guide",
+        content: "Our easy to follow workflow guide will take you from project set-up to Effentia expert in no time.",
       },
       {
         icon: "🏠",
@@ -17,17 +17,17 @@ function ResourceDropdown(){
       {
         icon: "🎥",
         heading: "Webinars",
-        content: "Enjoy our free Leadnest webinars and become a productivity professional.",
+        content: "Enjoy our free Effentia webinars and become a productivity professional.",
       },
       {
         icon: "💼",
         heading: "Customer stories",
-        content: "See how businesses have adopted Leadnest as a vital part of their workflow.",
+        content: "See how businesses have adopted Effentia as a vital part of their workflow.",
       },
       {
         icon: "⚙️",
         heading: "Developers",
-        content: "The sky's the limit in what you can deliver to Leadnest users in your Power-Up!",
+        content: "The sky's the limit in what you can deliver to Effentia users in your Power-Up!",
       },
       {
         icon: "❓",
@@ -75,10 +75,10 @@ function ResourceDropdown(){
                   <hr className="text-zinc-500 mb-10"/>
                   <div className="bg-white p-6 rounded-lg border border-gray-200">
                     <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                      Discover Leadnest use cases, productivity tips, best practices for team collaboration, and expert remote work advice.
+                      Discover Effentia use cases, productivity tips, best practices for team collaboration, and expert remote work advice.
                     </p>
                     <button className="w-full bg-white border-2 border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition-colors duration-100">
-                      Check out the Leadnest blog
+                      Check out the Effentia blog
                     </button>
                   </div>
                 </div>

@@ -21,7 +21,7 @@ function MainPageContent() {
         <div className="inline-block">
             <img src="/calendar.png" alt="" className="w-8 h-8"/>
             <h4 className="mt-2 text-md font-medium">Calendar</h4>
-            <p className="mt-2 text-sm text-zinc-700">Plan ahead, stay on track, and never miss a deadline. Leadnest's
+            <p className="mt-2 text-sm text-zinc-700">Plan ahead, stay on track, and never miss a deadline. Effentia's
           calendar helps you visualize your workflow and coordinate tasks
           effortlessly across teams.</p>
         </div>
@@ -36,7 +36,7 @@ function MainPageContent() {
             <img src="/teamwork.png" alt="" className="w-8 h-8"/>
             <h4 className="mt-2 text-md font-medium">Teamwork</h4>
             <p className="mt-2 text-sm text-zinc-700">Empower every role with shared goals, open communication, and aligned
-          priorities. Leadnest fosters seamless teamwork with built-in clarity.</p>
+          priorities. Effentia fosters seamless teamwork with built-in clarity.</p>
         </div>
     </div>
   );

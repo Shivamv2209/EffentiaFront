@@ -3,7 +3,10 @@ import {Routes,Route} from "react-router-dom"
 import MainPage from "./Pages/MainPage";
 import Login from "./Pages/Login";
 import Signup from "./Pages/SignUp";
-import Display1 from "./Pages/Display1";
+import Protected from "./utils/Protected";
+import Explore from "./Pages/Explore";
+import MyProjects from "./Pages/MyProjects";
+import Projects from "./Pages/Projects";
 
 function App(){
   return(
@@ -11,7 +14,9 @@ function App(){
      <Route path="/" element={<MainPage />} />
      <Route path="/login" element={<Login />} />
      <Route path="/signup" element={<Signup />} />
-     <Route path="/user/dis1" element={<Display1 />} />
+     <Route path="/explore" element={<Protected><Explore /></Protected>} />
+     <Route path="/explore/MyProjects" element={<Protected><MyProjects /></Protected>} />
+     <Route path="/explore/Projects" element={<Protected><Projects /></Protected>} />
     </Routes>
   )
 }
