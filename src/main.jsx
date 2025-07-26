@@ -7,6 +7,9 @@ import { PersistGate } from "redux-persist/integration/react";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 
+//just for development purposes
+persistor.purge();
+
 
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>

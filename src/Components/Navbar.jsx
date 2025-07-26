@@ -54,7 +54,7 @@ const getStarted = ()=>{
   return (
     <>
       <nav className="bg-white fixed z-[999] w-full top-0 start-0 shadow-xl">
-        <div className="max-w-screen-2xl flex items-center mx-auto justify-between md:p-0 sm:p-3 ">
+        <div className="max-w-screen-2xl flex items-center mx-auto justify-between md:p-0">
           <div className={`flex items-center ${user ? "gap-105" : "gap-16"}`}>
             <a href="#" className="flex items-center gap-3">
               <span className="text-3xl font-extrabold mt-2 mb-2">

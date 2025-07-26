@@ -38,7 +38,7 @@ export default function Login() {
       token:loggedIn.token
     }))
 
-    navigate("/explore")
+    navigate("/explore/Projects")
    }
 
   }catch(err){

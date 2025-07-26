@@ -28,7 +28,7 @@ function HeroSection() {
 
   return (
     <>
-      <div className="flex items-center justify-between gap-10 p-8 ml-10">
+      <div className="md:flex items-center justify-between gap-10 p-8 ml-10 sm:grid sm:grid-cols-1">
         <div ref={leftcontent} className="w-[40%] flex flex-col p-15 mt-10">
           <div className="inline-flex flex-wrap">
             <h1 className="text-3xl font-semibold">
