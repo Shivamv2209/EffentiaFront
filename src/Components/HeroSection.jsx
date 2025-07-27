@@ -28,20 +28,20 @@ function HeroSection() {
 
   return (
     <>
-      <div className="md:flex items-center justify-between gap-10 p-8 ml-10 sm:grid sm:grid-cols-1">
-        <div ref={leftcontent} className="w-[40%] flex flex-col p-15 mt-10">
+      <div className="flex items-center justify-between gap-10 p-8 ml-20 mt-10">
+        <div ref={leftcontent} className="w-[40%] flex flex-col p-5 mt-10">
           <div className="inline-flex flex-wrap">
-            <h1 className="text-3xl font-semibold">
+            <h1 className="text-6xl font-semibold">
               Organize smarter, execute faster, stress less.
             </h1>
           </div>
-          <div className="inline-flex flex-wrap">
-            <p className="text-lg text-zinc-700">
+          <div className="inline-flex flex-wrap mt-5">
+            <p className="text-xl text-zinc-700">
               A powerful workspace to manage projects, collaborate with your
               team, and track personal progress—all in one place,
             </p>
           </div>
-          <div className="flex items-center gap-5 mt-7">
+          <div className="flex items-center gap-5 mt-10">
             <button onClick={tryForFree} className="px-3 text-sm py-2 rounded-3xl bg-[#FA812F] hover:bg-orange-300 text-white shadow-lg font-semibold cursor-pointer">
               TRY IT FOR FREE
             </button>

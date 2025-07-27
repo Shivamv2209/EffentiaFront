@@ -9,7 +9,7 @@ function MainPage() {
       <Navbar />
       <div className="max-w-screen-2xl mx-auto">
         <HeroSection />
-      <MainPageContent />
+      {/* <MainPageContent /> */}
       </div>
     </>
   );
